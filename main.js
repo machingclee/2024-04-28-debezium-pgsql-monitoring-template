@@ -12,6 +12,7 @@ const topics = [
     "postgres.public.UserToChannel",
     "postgres.public.UserToProject"
 ];
+
 const run = async () => {
     const consumer = kafka.consumer({ groupId: "kafka" });
     consumer.subscribe({ topics, fromBeginning: false })
