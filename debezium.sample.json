@@ -1,0 +1,14 @@
+{
+    "name": "billie-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "plugin.name": "pgoutput",
+        "database.port": "5432",
+        "database.hostname": "",
+        "database.user": "",
+        "database.password": "",
+        "database.dbname": "",
+        "database.server.name": "postgres",
+        "table.include.list": "public.MessagesSession,public.SummaryFollow,public.LLMSummary,public.UserToProject,public.UserToChannel"
+    }
+}
