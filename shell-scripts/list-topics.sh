@@ -1,0 +1,1 @@
+docker exec -it "$(echo ${PWD##*/})"-kafka-1 bash -c "/usr/bin/kafka-topics --bootstrap-server localhost:9092 --list"

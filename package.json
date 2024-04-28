@@ -1,6 +1,13 @@
 {
+  "scripts": {
+    "register": "sh shell-scripts/register-connector.sh",
+    "health-check": "sh shell-scripts/health-check.sh",
+    "topics": "sh shell-scripts/list-topics.sh",
+    "start": "node main.js"
+  },
   "dependencies": {
     "add": "^2.0.6",
+    "cross-env": "^7.0.3",
     "env-cmd": "^10.1.0",
     "kafkajs": "^2.2.4",
     "yarn": "^1.22.22"
