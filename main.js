@@ -18,10 +18,15 @@ const run = async () => {
     consumer.subscribe({ topics, fromBeginning: false })
     await consumer.run({
         eachMessage: async ({ topic, partition, message }) => {
-            const payload = JSON.parse(message.value.toString()).payload;
-            console.log("------------------------")
-            console.log(topic)
-            console.log(payload)
+            try {
+                const payload = JSON.parse(message?.value?.toString() || null)?.payload || { message: "no message" };
+                console.log("------------------------")
+                console.log("[Topic] ", topic)
+                console.log("[Changes] ")
+                console.log(payload)
+            } catch (err) {
+                console.log("error with message: ", message);
+            }
         },
     })
 }
