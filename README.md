@@ -9,7 +9,7 @@
 - Run `yarn health-check`
 - Run `yarn topics`, you may need to wait for 10s for `yarn register` to take effects. 
 
-  After registration is done, you should have seen a list of topics that you can listen to, for example in my case:
+- After registration is done, you should have a list of topics that you can listen to, for example in my case:
   
   ```
   __confluent.support.metrics
